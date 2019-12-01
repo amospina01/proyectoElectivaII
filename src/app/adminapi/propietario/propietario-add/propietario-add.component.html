@@ -1,0 +1,40 @@
+<div class="form-row">
+  <form ngNativevalidate #p= "ngForm" class="form-horizontal form-material" (ngSubmit)="agregarPropi(e)">
+    <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Cedula</label>
+      <input ngModel type="text" class="form-control" name="cedula" placeholder="cedula" value="" required>
+      <div class="valid-tooltip">
+        Looks good! 
+      </div>
+     </div>
+
+     <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Nombre</label>
+      <input ngModel type="text" class="form-control" name="nom" placeholder="Nombre" value="" required>
+      <div class="valid-tooltip">
+        Looks good! 
+      </div>
+     </div>
+
+     <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Direccion</label>
+      <input ngModel type="text" class="form-control" name="dir" placeholder="Direccion" value="" required>
+      <div class="valid-tooltip">
+        Looks good! 
+      </div>
+     </div>
+
+     <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Telefono</label>
+      <input ngModel type="text" class="form-control" name="telefono" placeholder="Telefono" value="" required>
+      <div class="valid-tooltip">
+        Looks good! 
+      </div>
+     </div>
+
+    </div>
+    <button class="btn btn-outline-danger" type="submit"> Crear propietario </button>
+    </form>
+  </div>
+

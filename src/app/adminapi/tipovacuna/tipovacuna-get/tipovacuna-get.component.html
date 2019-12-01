@@ -1,0 +1,43 @@
+<form ngNativevalidate #k= "ngForm" class="form-horizontal form-material" (ngSubmit)="buscar(k)">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+      
+        <label for="validationCustom01">Buscar Tipo vacunas</label>
+        <input name="nomb" type="text" class="form-control"  placeholder="Buscar..." [(ngModel)] ="filterTipovacuna" >
+      </div>
+    </div>
+    <div class="fg-actions d-flex justify-content-between">
+        <div class="buscar-btn">
+        <div class="recover-pass"> 
+          <button class="btn btn-outline-danger" type="submit"> Buscar </button>
+          </div>
+        </div>
+      </div>
+  
+      <table class="table">
+        <thead >
+          <tr>
+            <th scope="col" name="nombre" >Nombre Tipo vacuna</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tipovacuna of tipovacunas | filter:filterTipovacuna">
+            
+            
+            <td>
+              {{ tipovacuna.nombre}}
+            </td>
+            <td>  
+             <button (click)="delete(tipovacuna)" class="btn btn-outline-primary"> Delete</button>  
+             <button (click)="update(tipovacuna)" style="margin-left: 20px;" class="btn btn-outline-primary"> Edit</button>  
+            </td> 
+            
+          </tr>
+        </tbody>
+  
+      </table>
+  
+  </form>
+
+  
